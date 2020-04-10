@@ -15,7 +15,7 @@ import java.util.Optional;
 @Service
 public class LancamentoServiceImpl implements LancamentoService {
 
-    private static final Logger log = LoggerFactory.getLogger(EmpresaServiceImpl.class);
+    private static final Logger log = LoggerFactory.getLogger(LancamentoServiceImpl.class);
 
     private LancamentoRepository lancamentoRepository;
 
