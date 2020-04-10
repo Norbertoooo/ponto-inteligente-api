@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(name = "funcionario")
@@ -143,6 +144,21 @@ public class Funcionario implements Serializable {
 
     public void setLancamentos(List<Lancamento> lancamentos) {
         this.lancamentos = lancamentos;
+    }
+
+    @Transient
+    public Optional<Float> getQtdHorasTrabalhoDiaOpt() {
+        return Optional.ofNullable(qtdHorasTrabalhoDia);
+    }
+
+    @Transient
+    public Optional<Float> getQtdHorasAlmocoOpt() {
+        return Optional.ofNullable(qtdHorasAlmoco);
+    }
+
+    @Transient
+    public Optional<BigDecimal> getValorHoraOpt() {
+        return Optional.ofNullable(valorHora);
     }
 
     @PreUpdate
